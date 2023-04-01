@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane>
+<StackPane fx:id="MainScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="465.0" style="-fx-background-color: silver;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Welcome">
+    <children>
+        <VBox spacing="10.0" alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label prefWidth="150" style="-fx-border-color: gray; -fx-border-radius: 5;" text="Main Screen">
+                            <font>
+                                <Font name="System Bold Italic" size="25.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <VBox spacing="10.0" alignment="CENTER">
+                    <children>
+                        <Button fx:id="MainCustomersButton" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onCustomersButton" prefWidth="150" text="Customers">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="MainAppointmentsButton" mnemonicParsing="false" onAction="#onAppointmentsButton" prefWidth="150" text="Appointments">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="MainReportsButton" mnemonicParsing="false" onAction="#onReportsButton" prefWidth="150" text="Reports">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="MainExitButton" mnemonicParsing="false" onAction="#onExitButton" prefWidth="150" text="Exit">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</StackPane>

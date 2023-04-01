@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<VBox prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Appointments">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3eaff"  opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
 
-</AnchorPane>
+        <VBox spacing="10.0" alignment="CENTER">
+            <GridPane hgap="10.0" vgap="10.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="90.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="145.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="117.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="144.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+
+                <Label fx:id="titleLabel" text="Title" />
+                <TextField fx:id="titleField" GridPane.columnIndex="1" />
+
+                <Label fx:id="descriptionLabel" text="Description" GridPane.rowIndex="1" />
+                <TextField fx:id="descriptionField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label fx:id="contactLabel" text="Contact" GridPane.rowIndex="2" />
+                <ComboBox fx:id="contactComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label fx:id="typeLabel" text="Type" GridPane.rowIndex="3" />
+                <TextField fx:id="typeField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label fx:id="userIdLabel" text="User ID" GridPane.rowIndex="4" />
+                <TextField fx:id="userIdField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label fx:id="customerIdLabel" text="Customer ID" GridPane.rowIndex="5" />
+                <TextField fx:id="customerIdField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Label fx:id="startDateLabel" text="Start date" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <DatePicker fx:id="startDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                <Label fx:id="startTimeLabel" text="Start time" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Spinner fx:id="startTimeSpinner" onMouseClicked="#onStartSpinnerClick" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                <Label fx:id="endDateLabel" text="End date" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <DatePicker fx:id="endDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+                <Label fx:id="endTimeLabel" text="End time" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Spinner fx:id="endTimeSpinner" onMouseClicked="#onEndSpinnerClick" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+                <Label fx:id="locationLabel" text="Location" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <TextField fx:id="locationField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <Label fx:id="appointmentIdLabel" text="Appointment ID" GridPane.columnIndex="2" />
+                <TextField fx:id="appointmentIdField" disable="true" editable="false" focusTraversable="false" GridPane.columnIndex="3" />
+
+            </GridPane>
+
+            <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButton" text="Cancel" />
+                <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveButton" text="Save" />
+            </HBox>
+        </VBox>
+    </children>
+</VBox>

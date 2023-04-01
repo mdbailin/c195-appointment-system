@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="480.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Scheduler">
+    <children>
+        <Group>
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3eaff" height="480.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="960.0" />
+                <HBox layoutX="20.0" layoutY="433.0" prefHeight="30.0" prefWidth="922.0" spacing="20.0">
+                    <children>
+                        <Button fx:id="addAppointmentButton" mnemonicParsing="false" onAction="#onAddButton" text="Add" />
+                        <Button fx:id="updateAppointmentButton" mnemonicParsing="false" onAction="#onUpdateButton" text="Update" />
+                        <Button fx:id="deleteAppointmentButton" mnemonicParsing="false" onAction="#onDeleteButton" text="Delete" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <ToggleButton fx:id="toggleViewButton" mnemonicParsing="false" onAction="#onToggleTableView" text="View appointments" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Button fx:id="reportsButton" mnemonicParsing="false" onAction="#onReportsButton" text="Reports" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Button fx:id="logOutButton" alignment="CENTER" mnemonicParsing="false" onAction="#onlogoutbutton" text="Log out" textAlignment="CENTER">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox layoutX="543.0" layoutY="13.0" prefHeight="20.0" prefWidth="408.0" spacing="20.0">
+                    <children>
+                        <RadioButton fx:id="appointmentByMonthRadioButton" mnemonicParsing="false" onAction="#onMonthToggle" prefHeight="17.0" prefWidth="130.0" selected="true" text="Appt. this month" />
+                        <RadioButton fx:id="appointmentByWeekRadioButton" mnemonicParsing="false" onAction="#onWeekToggle" prefHeight="17.0" prefWidth="129.0" text="Appt. this week" />
+                        <RadioButton fx:id="allAppointmentsRadio" mnemonicParsing="false" onAction="#onAllAppointmentsRadio" prefHeight="17.0" prefWidth="94.0" text="All Appt." />
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+                <HBox layoutX="20.0" layoutY="14.0" prefHeight="17.0" prefWidth="523.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="timeZoneDescriptionLabel" text="Time Zone:" />
+                        <Label fx:id="timeZoneLabel" text="Time Zone string" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Label fx:id="serverTimeZoneDescriptionLabel" text="Server Time Zone:" />
+                        <Label fx:id="serverTimeZoneLabel" text="Server Time Zone string" />
+                    </children>
+                </HBox>
+            </children>
+        </Group>
+        <TableView fx:id="selectionView" layoutX="4.0" layoutY="50.0" onMouseClicked="#onAppointmentClicked" prefHeight="365.0" prefWidth="952.0">
+            <columns>
+                <TableColumn fx:id="appointmentIdCol_a" editable="false" prefWidth="105.0" sortable="false" text="Appointment_ID" />
+                <TableColumn fx:id="titleColumn_a" editable="false" prefWidth="70.0" sortable="false" text="Title" />
+                <TableColumn fx:id="descriptionColumn_a" editable="false" prefWidth="130.0" sortable="false" text="Description" />
+                <TableColumn fx:id="locationColumn_a" editable="false" prefWidth="81.0" sortable="false" text="Location" />
+                <TableColumn fx:id="contactColumn_a" editable="false" prefWidth="78.0" sortable="false" text="Contact" />
+                <TableColumn fx:id="typeColumn_a" editable="false" prefWidth="71.0" sortable="false" text="Type" />
+                <TableColumn fx:id="startColumn_a" editable="false" minWidth="9.0" prefWidth="129.0" sortable="false" text="Start" />
+                <TableColumn fx:id="endColumn_a" editable="false" prefWidth="128.0" sortable="false" text="End" />
+                <TableColumn fx:id="customerIdColumn_a" editable="false" minWidth="0.0" prefWidth="82.0" sortable="false" text="Customer_ID" />
+                <TableColumn fx:id="userIdColumn_a" editable="false" prefWidth="77.0" sortable="false" text="User_ID" />
+            </columns>
+        </TableView>
+        <TableView fx:id="custTableView" disable="true" layoutX="4.0" layoutY="50.0" onMouseClicked="#onCustomerClick" prefHeight="365.0" prefWidth="952.0" visible="false">
+            <columns>
+                <TableColumn fx:id="customerIdColumn_c" editable="false" sortable="false" text="Customer_ID" />
+                <TableColumn fx:id="customerNameColumn_c" editable="false" prefWidth="130.0" sortable="false" text="Customer_Name" />
+                <TableColumn fx:id="addressColumn_c" editable="false" prefWidth="160.0" sortable="false" text="Address" />
+                <TableColumn fx:id="postalCodeColumn_c" editable="false" prefWidth="91.0" sortable="false" text="Postal_Code" />
+                <TableColumn fx:id="phoneColumn_c" editable="false" prefWidth="98.0" sortable="false" text="Phone" />
+                <TableColumn fx:id="createDateColumn_c" editable="false" sortable="false" text="Create_Date" />
+                <TableColumn fx:id="createdByColumn_c" editable="false" minWidth="0.0" prefWidth="61.0" sortable="false" text="Created_By" />
+                <TableColumn fx:id="lastUpdateColumn_c" editable="false" prefWidth="65.0" sortable="false" text="Last_Update" />
+                <TableColumn fx:id="lastUpdatedByColumn_c" editable="false" prefWidth="103.0" sortable="false" text="Last_Updated_By" />
+                <TableColumn fx:id="divisionIdColumn_c" editable="false" prefWidth="83.0" sortable="false" text="Division_ID" />
+            </columns>
+        </TableView>
+        <Group layoutX="4.0" layoutY="4.0" visible="false">
+            <children>
+                <Rectangle fx:id="appointmentRectangle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="51.0" stroke="BLACK" strokeType="INSIDE" width="952.0" />
+                <Button fx:id="dismissRectangleButton" layoutX="852.0" layoutY="13.0" mnemonicParsing="false" onAction="#onDismissRectangleButton" text="Acknowledge" />
+                <Label fx:id="rectangleLabel" blendMode="DARKEN" layoutX="14.0" layoutY="4.0" prefHeight="43.0" prefWidth="866.0" text="Label">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+            </children>
+        </Group>
+    </children>
 </AnchorPane>

@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<GridPane prefHeight="429.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customers">
+    <columnConstraints>
+        <ColumnConstraints prefWidth="90.0"/>
+        <ColumnConstraints prefWidth="260.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="30.0"/>
+        <RowConstraints prefHeight="30.0"/>
+        <RowConstraints prefHeight="30.0"/>
+        <RowConstraints prefHeight="30.0"/>
+        <RowConstraints prefHeight="30.0"/>
+        <RowConstraints prefHeight="30.0"/>
+        <RowConstraints prefHeight="30.0"/>
+        <RowConstraints prefHeight="30.0"/>
+    </rowConstraints>
 
-</AnchorPane>
+    <Label fx:id="customerIdLabel" text="Customer ID:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="customerIdField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label fx:id="nameLabel" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label fx:id="addressLabel" text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label fx:id="postalCodeLabel" text="Postal Code:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="postalCodeField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label fx:id="phoneLabel" text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Label fx:id="countryLabel" text="Country:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <ComboBox fx:id="countryComboBox" onAction="#onCountryComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+    <Label fx:id="stateLabel" text="State:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <ComboBox fx:id="divisionComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+    <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveCustomerToDatabase" text="Save" GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.halignment="RIGHT"/>
+    <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButton" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.halignment="LEFT"/>
+</GridPane>
+

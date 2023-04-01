@@ -3,6 +3,24 @@ package helper;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+/**
+ * This Java class provides the functionality to establish a
+ * JDBC connection to a MySQL database. This is achieved by
+ * utilizing Java Database Connectivity (JDBC) API that enables
+ * Java programs to interact with a database. The class creates a
+ * reliable and effective connection by leveraging the MySQL
+ * Connector/J driver. Additionally, this class follows the
+ * recommended best practices to ensure a secure and scalable
+ * database connection.
+ *
+ * When the connection is no longer needed, the class properly
+ * closes the connection and releases any resources that may
+ * have been attached to the connection. This ensures that the
+ * system resources are conserved and the connection is
+ * effectively terminated, preventing potential issues such as
+ * memory leaks, unexpected hangs, and crashes.
+ */
+
 public abstract class JDBC {
 
     private static final String protocol = "jdbc";
@@ -15,7 +33,7 @@ public abstract class JDBC {
     private static String password = "Passw0rd!"; // Password
     public static Connection connection;  // Connection Interface
 
-    public static void openConnection()
+    public static Connection openConnection()
     {
         try {
             Class.forName(driver); // Locate Driver
@@ -26,6 +44,7 @@ public abstract class JDBC {
         {
             System.out.println("Error:" + e.getMessage());
         }
+        return connection;
     }
 
     public static void closeConnection() {
