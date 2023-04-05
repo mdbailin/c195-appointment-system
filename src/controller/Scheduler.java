@@ -442,18 +442,21 @@ public class Scheduler {
         custTableView.setItems(customerList);
 
         ObservableList<Appointment> displayedAppointments;
+        selectionView.setItems(appointmentList);
 
         if (monthSort) {
             displayedAppointments = FXCollections.observableArrayList(filterAppointmentsByMonth());
+            selectionView.setItems(displayedAppointments);
         } else {
             displayedAppointments = FXCollections.observableArrayList(weekFilter());
+            selectionView.setItems(displayedAppointments);
+
         }
 
         if (viewAll) {
-            displayedAppointments.addAll(appointmentList);
+            selectionView.setItems(appointmentList);
         }
 
-        selectionView.setItems(appointmentList);
     }
 
     /**
