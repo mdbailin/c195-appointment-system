@@ -2,47 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0b2db4e-e77b-4f7b-bdeb-fb0092d15607" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c195-appointment-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/c195-appointment-system.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Appointments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Appointments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Customers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Reports.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Scheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Scheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Welcome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbQueries/AppointmentQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbQueries/AppointmentQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbQueries/ContactQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbQueries/ContactQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbQueries/CountryQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbQueries/CountryQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbQueries/CustomerQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbQueries/CustomerQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbQueries/FirstLevelDivisionQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbQueries/FirstLevelDivisionQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbQueries/UserQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbQueries/UserQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/AppointmentOverlap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/AppointmentOverlap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/DateAndTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/DateAndTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/JDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/languages/LanguageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/languages/LanguageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/languages/lang_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/languages/lang_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/languages/lang_fr.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/languages/lang_fr.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DBDateObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DBDateObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/Login.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/Login.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/AlertManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/AlertManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/LoginMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/LoginMonitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/ReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/ReportManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/TimeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Appointments.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Appointments.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Customers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Reports.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Reports.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Schedule.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Schedule.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Welcome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,18 +29,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/matthewbailin/IdeaProjects/c195-appointment-system&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/matthewbailin/Downloads/c195-appointment-system",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pathVariables"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -105,6 +65,14 @@
       <option name="presentableId" value="Default" />
       <updated>1679495697390</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changed functionality">
+      <created>1680359419835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680359419835</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,5 +85,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed functionality" />
   </component>
 </project>
