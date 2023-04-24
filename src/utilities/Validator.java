@@ -357,7 +357,7 @@ import java.util.regex.Pattern;
     /**
      * This method checks whether a given start/end date is within the bounds of another start/end date.
      * Specifically, it compares whether the given start date and end date fall within another set of start
-     * and end dates. The method takes 4 inputs, 2 pairs of start & end date.
+     * and end dates. The method takes 4 inputs, 2 pairs of start and end date.
      *
      * Comparing between them, this method returns a boolean value of True if the start and end dates fall
      * between another set of start and end dates.

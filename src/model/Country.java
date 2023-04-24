@@ -60,8 +60,6 @@ public class Country extends DBDateObj {
      * @param id The unique identifier of the Country.
      *            This parameter is mandatory and should be a non-null integer value representing the unique identifier of the country.
      *
-     * @return This method does not return any value.
-     *
      * @throws  IllegalArgumentException If the input parameter is null or negative, then an IllegalArgumentException is thrown.
      *           In such cases, the caller must handle this exception to ensure that the system gracefully handles this scenario.
      */

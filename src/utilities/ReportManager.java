@@ -168,9 +168,8 @@ public abstract class ReportManager {
      *                   cannot be null or empty.
      *
      * @throws IllegalArgumentException If the file name or report content is null or empty.
-     * @throws IOException              If there was an issue writing or appending to the specified file.
      */
-    public static void writeReportToFile(String reportName, String report) {
+    public static void writeReportToFile (String reportName, String report) {
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         PrintWriter printWriter = null;

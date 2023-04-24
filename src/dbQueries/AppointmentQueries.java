@@ -11,6 +11,8 @@ import java.sql.Timestamp;
 import model.Appointment;
 import languages.LanguageManager;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
 /**
@@ -42,6 +44,32 @@ public class AppointmentQueries {
             ex.printStackTrace();
         }
         return processResultsToObservableList(resultSet);
+    }
+    /**
+     * Returns an ObservableList containing all Appointments that start within 15 minutes retrieved from the database.
+     * The method establishes a connection to the database, creates an SQL statement to retrieve all Appointment
+     * records, executes the statement, and maps each record to a new Appointment object which is added to the
+     * ObservableList. If there is an error executing the SQL statement, a SQLException is thrown.
+     *
+     * @return An ObservableList containing all Appointments.
+     * @throws SQLException if there is an error executing the SQL statement.
+     */
+    public static ObservableList<Appointment> fetchAllAppointmentsWithin15Minutes() throws SQLException {
+        ResultSet appointments = null;
+        LocalDateTime now = LocalDateTime.now();
+        ZoneId zid = ZoneId.systemDefault();
+        ZonedDateTime zdt = now.atZone(zid);
+        LocalDateTime ldt = zdt.withZoneSameInstant(ZoneId.of("UTC")).toLocalDateTime();
+        try {
+            //SQL Statement
+            String sqlQuery = "SELECT * FROM appointments\n" +
+                    "where Start > '" + ldt + "'  - interval 15 minute;";
+            PreparedStatement statement = JDBC.openConnection().prepareStatement(sqlQuery);
+            appointments = statement.executeQuery();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return processResultsToObservableList(appointments);
     }
 
     /**
@@ -221,15 +249,12 @@ public class AppointmentQueries {
      *
      * @param appointment The appointment object containing the updated information to be saved in the database.
      *
-     * @throws Exception if there was an issue writing the appointment to the database.
      * @throws IllegalArgumentException if the provided appointment object is null.
      *
      * This method will attempt to update the appointment information in the database with what
      * is provided in the appointment object parameter.
      * If there are any issues writing to the database, an exception will be thrown.
      * If the provided appointment object is null, an IllegalArgumentException will be thrown.
-     *
-     * @return Returns nothing.
      */
     public static void updateAppointment(Appointment appointment) {
         try {

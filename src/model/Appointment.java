@@ -119,8 +119,6 @@ public class Appointment extends DBDateObj {
      *                      This parameter is automatically
      *                      set to the name of the user who last updated the appointment.
      *
-     * @return - A new Appointment object with the provided information. This method returns an Appointment object
-     * that contains all the provided appointment details.
      */
     public Appointment(int id, String title, String description, String location, String type,
                        ZonedDateTime start, ZonedDateTime end, int customerId, int userId, int contactId,

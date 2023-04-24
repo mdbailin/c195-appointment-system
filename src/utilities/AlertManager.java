@@ -27,6 +27,18 @@ public abstract class AlertManager {
         alert.show();
     }
     /**
+     * Displays an alert with a custom message and title. Message and title are retrieved from the LanguageManager.
+     * @param message - the desired message for the alert
+     * @param title - the desired title for the alert window
+     **/
+    public static void showAlert(String message, String title, String text) {
+        Alert alert = new Alert(Alert.AlertType.NONE, LanguageManager.getTranslation(message), ButtonType.OK);
+        alert.setTitle(LanguageManager.getTranslation(title));
+        alert.setContentText(text);
+        alert.setHeight(900);
+        alert.show();
+    }
+    /**
      * Displays a confirmation window and returns true if user selects YES, false if NO or CANCEL is selected.
      * @param message - the desired message for the confirmation window to show
      * @return true if user selects YES, false if user selects NO or CANCEL

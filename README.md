@@ -4,6 +4,8 @@
 The purpose of this application is to provide a GUI-based scheduling desktop application.
 
 ### Author Information
+- Name: Matthew Bailin
+- Student #: 000919530
 - Application version: 1.0 📝
 - Date: 03/30/2023 📅
 
